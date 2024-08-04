@@ -1,0 +1,1 @@
+- [ ] 多语言：https://github.com/ocoke/Biscus/discussions/14
