@@ -1,5 +1,5 @@
 - [ ] 多语言：https://github.com/ocoke/Biscus/discussions/14
-- [ ] 右侧导航菜单加层级
+- [x] 右侧导航菜单加层级: 指定outline:[2,5]
 - [x] 优化历史文章内容，剥离业务内容
 - [ ] 导入新的文章
 - [ ] 算法
