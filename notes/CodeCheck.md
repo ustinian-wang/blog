@@ -10,9 +10,7 @@
 - 禁止vue组件没有添加script标签
 - 禁止style标签@import scss文件，但没有声明lang='scss'
 - 禁止export出来的function没有写注释
-- 禁止存在敏感关键词，例如`凡科`
-- 禁止把 v-if 和 v-for 同时用在同一个元素上。
-- 禁止在template上使用wx:相关语法
+- 禁止存在敏感关键词，例如`xxx`
 - 禁止把 v-if 和 v-for 同时用在同一个元素上。
 - 禁止图片资源链接使用带域名的绝对路径
 - 要求`JSON.parse`要加上try-catch
@@ -23,8 +21,6 @@
 - 要求if语句用大括号包裹一行或多行代码块
 - 要求js中的字符串应该用单引号声明，而不是双引号
 - 要求声明vue的data成员属性，避免赋值后没有双向绑定，如果是obj[xxx]=xxx的方式赋值，请改用this.$set设置值
-- 要求【体验评分优化】样式中含有`overflow: scroll;`、`overflow-x: scroll;`、`overflow-y: scroll;
-  `，要求开启惯性滚动：`-webkit-overflow-scrolling:touch;`
 
 ## 推荐
 - 禁止残留log在代码中

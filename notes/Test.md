@@ -12,7 +12,7 @@
 
 ## 前端项目在使用的测试
 
-- @mall/kit：工具函数引入jest做单元测试，验证入参和出参
+- kit：工具函数引入jest做单元测试，验证入参和出参
 
 ## 当提交代码触发ci失败时，应当如何处理？
 
@@ -30,51 +30,16 @@ var testData = {
     "b": 4, //取值范围：[4, 5, 6]
 }
 ```
-a有3种可能，b有3种可能，这里就有3x3=9种组合。如果你手动点点，那么就需要修改9次数据看表现，我们也可以通过@mall/kit提供`openTestCaseOfModal`，通过弹窗流程生成测试数据，
+a有3种可能，b有3种可能，这里就有3x3=9种组合。如果你手动点点，那么就需要修改9次数据看表现，我们也可以通过@mall/kit提供`getCombinationOfObject`生成测试数据，
 ```javascript
-import { openTestCaseOfModal } from "@mall/kit";
-openTestCaseOfModal({
-    data: this.testData, dataDef: {
+import { getCombinationOfObject } from "@ustinian-wang/kit";
+let dataList = getCombinationOfObject(testData, {
         a: [1, 2,3],
         b: [4, 5, 6]
-    },
-    change: (data)=>{
-        this.testData = deepAssign( {}, this.testData, data );
-    }
-})
+    });
+this.testData = deepAssign( {}, testData, dataList[0] );
 ```
 测试表现：
 ![test_testCase.gif](./images/test_testCase.gif)
 
-
-目前再以一个mallapp-res的产品展示模块测试为例，我们会有如下的数据格式：
-```javascript
-let moduleData = {
-    content: {
-        s: 1,//0-5
-        ct: 2,//0-2
-    },
-    pattern: {}
-}
-```
-s有6种可能，ct有3种可能，这里就有18种组合。如果你手动点点，那么就需要添加18次模块看表现，我们也可以通过@mall/kit提供`openTestCaseOfModal`，通过弹窗流程生成测试数据，
-```javascript
-import { openTestCaseOfModal } from "@mall/kit";
-openTestCaseOfModal({
-    data: moduleData,
-    dataDef: {  },
-    change: (newModule)=>{
-        //弹窗里面切换的用例数据，他的格式传入的moduleData是一样的，你可以在这里做this.$set之类的操作来让数据生效
-        deepAssign(moduleData, newModule)
-    },
-    propsOfModal: {
-        wrapClassName: "f_left",
-        width: 540,
-        footer: null,
-    }
-});
-```
-效果详见：
-![./test_productListTestCase.gif](./images/test_productListTestCase.gif)
-
-更多openTestCaseOfModal的详细用法，详见[传送门](http://mafe.fff.com/kit/global.html#openTestCaseOfModal)
+更多`getCombinationOfObject`的详细用法，详见[传送门](https://ustinian-wang.github.io/kit/global.html#getCombinationOfObject)

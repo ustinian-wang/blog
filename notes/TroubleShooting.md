@@ -45,9 +45,9 @@ error D:\chenjiajin\res\mallhelper-res\node_modules\node-sass: command failed
 
 ## GIT
 
-### Q: 前端代码在dep没生效
+### Q: 前端代码在某个环境没生效
 按照如下步骤排查：
-- search下关键字是否在静态资源中出现：看下服务器上有无对应的代码
-- 代码没有pick到暂存区：把master合并到pre
-- dep的git暂存区有内容导致ci拉不下来：git checkout掉
-- 代码没有压缩，在src下有，在min下没有：走d系统压缩下
+- search下关键字是否在浏览器的静态资源中出现：看下服务器上有无对应的代码
+- 代码没有pick到暂存区：把master合并到目标分支
+- ci中，环境的git暂存区有内容导致ci拉不下来：git checkout掉
+- 代码没有压缩，在src下有，在min下没有：走系统压缩下
