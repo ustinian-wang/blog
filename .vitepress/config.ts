@@ -45,7 +45,8 @@ export default defineConfig({
 
         search: {
             provider: 'local'
-        }
+        },
+        outline: [2,5],
     },
     vite: {
         plugins: [pagefindPlugin(
@@ -60,4 +61,5 @@ export default defineConfig({
             }
         )],
     },
+    lastUpdated: true,
 })
