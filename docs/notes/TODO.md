@@ -1,10 +1,11 @@
 - [ ] 多语言：https://github.com/ocoke/Biscus/discussions/14
 - [x] 右侧导航菜单加层级: 指定outline:[2,5]
 - [x] 优化历史文章内容，剥离业务内容
-- [ ] 导入新的文章
+- [x] 导入新的文章
 - [ ] 算法
 - [ ] 头像加动画: 
     - [x] 加了个圆角
+- [x] 自动生成文章列表: https://blog.csdn.net/caspar_notes/article/details/139055060
 - [ ] 引入看板娘: 后面再说
 - [ ] ci加上邮件通知
 - [ ] 加入自己的作品集合

@@ -9,9 +9,9 @@ teams, and elevating user experiences with advanced technologies. Eager to advan
 make a significant impact in a dynamic work environment.
 
 - Email: wangjser@gmail.com 
-- Github: https://github.com/ustinian-wang
+- GitHub: https://github.com/ustinian-wang
 - Blog: https://ustinian-wang.github.io/blog/
-- Location: GuangZhou, China 
+- Location: Guangzhou, China 
 
 
 
@@ -19,11 +19,11 @@ make a significant impact in a dynamic work environment.
 
 **Faisco** 
 
-Frontend Engineer 
+Front-end Engineer 
 
 Dec 2016 - Present
 
-- I manage mall management projects on PC, mobile, and WeChat.
+- I manage mall management projects on PC, mobile, and We Chat.
 
 - Responsible for critical features like Points Reward and Flash Sale.
 
@@ -42,7 +42,7 @@ Bachelor's degree in Computer Science and Technology
 
 **mallapp** 2020 - Present
 
-- Our SaaS platform comprises a designer interface and visitor view, enabling users to customize 
+- Our Saas platform comprises a designer interface and visitor view, enabling users to customize 
 
 views based on their preferences. With a user base exceeding 20 million, we consistently deliver 
 

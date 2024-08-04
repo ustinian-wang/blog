@@ -1,5 +1,6 @@
 import {defineConfig} from 'vitepress'
 import {pagefindPlugin} from "vitepress-plugin-pagefind";
+import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 //default options
 let options = {
     previewLength: 62,
@@ -26,20 +27,6 @@ export default defineConfig({
             {text: 'Notes', link: '/docs/notes/README.md'},
             {text: 'About Me', link: '/docs/Resume.md'},
         ],
-
-        sidebar: [
-            {
-                text: 'notes',
-                items: [
-                    {text: 'CrossDomain', link: '/docs/notes/CrossDomain'},
-                    {text: 'CodeCheck', link: '/docs/notes/CodeCheck'},
-                    {text: 'Test', link: '/docs/notes/Test'},
-                    {text: 'TroubleShooting', link: '/docs/notes/TroubleShooting'},
-                    {text: 'UXGuide', link: '/docs/notes/UXGuide'},
-                ]
-            }
-        ],
-
         socialLinks: [
             {icon: 'github', link: 'https://github.com/ustinian-wang'}
         ],
@@ -50,7 +37,13 @@ export default defineConfig({
         outline: [2,5],
     },
     vite: {
-        plugins: [pagefindPlugin(
+        plugins: [
+            AutoSidebar({
+                path: '.',
+                collapsed: false,
+                ignoreList: ['.obsidian', '.git', 'node_modules']
+            }),
+            pagefindPlugin(
             {
                 customSearchQuery(input) {
                     // 将搜索的每个中文单字两侧加上空格
