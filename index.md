@@ -12,7 +12,7 @@ hero:
       link: /markdown-examples
     - theme: alt
       text: Notes
-      link: /notes/README.md
+      link: /docs/notes/README.md
 
 features:
   - title: notes
