@@ -93,4 +93,4 @@ yarn add lint-staged@10.5.4 -D
 ` git commit -m "test: commitlint"`（通过）
 
 ### AST
-利用babel解析代码为AST，检查AST的节点是否符合[规范](./docs/guidelines.md)，从而进行拦截，触发点位于`husky`的钩子
+利用babel解析代码为AST，检查AST的节点是否符合上述规范，从而进行拦截，触发点位于`husky`的钩子
