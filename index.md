@@ -8,11 +8,11 @@ hero:
   image: https://avatars.githubusercontent.com/u/19329080?v=4
   actions:
     - theme: brand
-      text: About Me
-      link: /docs/resume
-    - theme: alt
       text: Notes
       link: /docs/notes/README.md
+    - theme: alt
+      text: About Me
+      link: /docs/resume
 
 features:
   - title: notes
