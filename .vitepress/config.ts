@@ -11,6 +11,7 @@ let options = {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    base: "/blog",
     title: "My Blog",
     description: "This is my blog to record solutions of issues in daily development",
     lang: 'zh-cn',
