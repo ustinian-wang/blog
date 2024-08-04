@@ -41,7 +41,7 @@ export default defineConfig({
         plugins: [
             AutoSidebar({
                 path: '.',
-                collapsed: false,
+                collapsed: true,
                 ignoreList: ['.obsidian', '.git', 'node_modules']
             }),
             pagefindPlugin(
