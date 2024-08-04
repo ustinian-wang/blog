@@ -24,6 +24,7 @@ export default defineConfig({
         nav: [
             {text: 'Home', link: '/'},
             {text: 'Notes', link: '/docs/notes/README.md'},
+            {text: 'About Me', link: '/docs/Resume.md'},
         ],
 
         sidebar: [
