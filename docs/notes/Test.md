@@ -40,6 +40,6 @@ let dataList = getCombinationOfObject(testData, {
 this.testData = deepAssign( {}, testData, dataList[0] );
 ```
 测试表现：
-![test_testCase.gif](images/test_testCase.gif)
+![test_testCase.gif](../images/test_testCase.gif)
 
 更多`getCombinationOfObject`的详细用法，详见[传送门](https://ustinian-wang.github.io/kit/global.html#getCombinationOfObject)
