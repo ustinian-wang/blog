@@ -3,23 +3,13 @@
 
 
 1、文件分层：
+```shell
 
--|-base
-
- |-component
-
- |-common
-
- |-page
-
-base：屏蔽底层UI差异，原子类UI，通用UI
-
-component：各个组件的UI
-
-common：页面中可以共用UI
-
-page：页面具体的业务UI
-
+---base #屏蔽底层UI差异，原子类UI，通用UI
+ |-component #各个组件的UI
+ |-common #页面中可以共用UI
+ |-page #页面具体的业务UI
+```
 2、命名空间隔离
 
 意义：与第三方的插件或者框架避开UI上的冲突

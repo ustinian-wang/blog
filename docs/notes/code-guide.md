@@ -1,4 +1,4 @@
-# 代码约束
+# code check
 
 ## 强制
 - 禁止在v-if、v-show使用常量true/false。

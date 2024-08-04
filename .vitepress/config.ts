@@ -35,6 +35,7 @@ export default defineConfig({
             provider: 'local'
         },
         outline: [2,5],
+        returnToTopLabel: "Return to top"
     },
     vite: {
         plugins: [

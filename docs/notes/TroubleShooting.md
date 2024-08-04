@@ -1,4 +1,4 @@
-# 帮助手册
+# troubleshooting
 
 ## npm/yarn 包管理工具
 
