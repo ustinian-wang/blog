@@ -62,3 +62,7 @@ error D:\chenjiajin\res\mallhelper-res\node_modules\node-sass: command failed
 
 - 测试b端和c端的时候可考虑这种情况，上传带有旋转参数的图片，看看是否都能正常展示
 ![[../images/5b2c305e278c857a4448cc7244b0758b0af5888c6e623e188655ad7999ee4e1b7356bf88e94199829032e10b5e63b4e5464759fea8de00d0c23bc5aaeaf0f1b7.png]](../images/5b2c305e278c857a4448cc7244b0758b0af5888c6e623e188655ad7999ee4e1b7356bf88e94199829032e10b5e63b4e5464759fea8de00d0c23bc5aaeaf0f1b7.png)
+
+## html
+### Q: 白屏情况
+- 页面视觉被隐藏了
