@@ -1,5 +1,5 @@
 
-# toubleshooting-hotel
+# troubleshooting-hotel
 
 ## FQA
 

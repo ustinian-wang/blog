@@ -51,3 +51,14 @@ error D:\chenjiajin\res\mallhelper-res\node_modules\node-sass: command failed
 - 代码没有pick到暂存区：把master合并到目标分支
 - ci中，环境的git暂存区有内容导致ci拉不下来：git checkout掉
 - 代码没有压缩，在src下有，在min下没有：走系统压缩下
+
+## IOS
+
+### Q: 图片旋转
+
+- 背景：互动这边有接到工单，客户反馈上传的图片会被旋转。
+
+- 测试：ios及数码相机拍摄的图片，会带有exif信息，其中一个叫orientation的方向信息，会导致在部分pc浏览器以及安卓机型里面无法正常展示。EXIF查看器：[https://exif.tuchong.com/](https://exif.tuchong.com/) 可查询图片是否带有旋转参数。
+
+- 测试b端和c端的时候可考虑这种情况，上传带有旋转参数的图片，看看是否都能正常展示
+![[../images/5b2c305e278c857a4448cc7244b0758b0af5888c6e623e188655ad7999ee4e1b7356bf88e94199829032e10b5e63b4e5464759fea8de00d0c23bc5aaeaf0f1b7.png]](../images/5b2c305e278c857a4448cc7244b0758b0af5888c6e623e188655ad7999ee4e1b7356bf88e94199829032e10b5e63b4e5464759fea8de00d0c23bc5aaeaf0f1b7.png)

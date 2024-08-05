@@ -103,7 +103,7 @@ b.  如果没发包，考虑排查url内容是否合法
 4.  如果url为空合法，需要获取权限后才能设置，考虑页面流程是否在onLoad或onShow存在路由重定向，考虑路由锁没释放，导致页面停留原地
 
 
-## wxmallapp和uniapp的语法差异
+## Q wxmallapp和uniapp的语法差异
 
 1.  事件绑定：catchtap="xxx" ==> @tap.stop="xxx"
 
@@ -113,3 +113,6 @@ b.  如果没发包，考虑排查url内容是否合法
 
 4.  triggerEvent替换为emit，不会带上原有事件的数据，需要注意
 
+## Q webp在小程序端无法长按保存
+
+	一般是微信问题，[渠道](https://developers.weixin.qq.com/community/develop/doc/000e8a08ce062837e280ed79d66400?fromCreate=0)提单处理：
