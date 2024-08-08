@@ -19,4 +19,4 @@
 - [ ] 组件支持
 	- [ ] 图片
 		- [ ] acceptFit
-		- [ ] acceptFill
+		- [ ] acceptFull
