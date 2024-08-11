@@ -1,4 +1,4 @@
-# url encode issue
+# url 编码问题
 
 url的组成：字母、阿拉伯数值、某些标点符号。
 

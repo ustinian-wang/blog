@@ -115,7 +115,7 @@ b.  如果没发包，考虑排查url内容是否合法
 
 ## Q webp在小程序端无法长按保存
 
-	一般是微信问题，[渠道](https://developers.weixin.qq.com/community/develop/doc/000e8a08ce062837e280ed79d66400?fromCreate=0)提单处理：
+一般是微信问题，[渠道](https://developers.weixin.qq.com/community/develop/doc/000e8a08ce062837e280ed79d66400?fromCreate=0)提单处理：
 
 ### Q 公众号组件 official-account 不渲染
 
