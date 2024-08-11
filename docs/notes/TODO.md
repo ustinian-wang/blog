@@ -18,5 +18,5 @@
 - [x] 过滤todo页面
 - [ ] 组件支持
 	- [ ] 图片
-		- [ ] acceptFit
+		- [ ] acceptFill
 		- [ ] acceptFull
