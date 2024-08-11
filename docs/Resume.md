@@ -1,91 +1,54 @@
-# Resume
+# Ustinian Wang
+
+## Contact Information
+
+- Email: wangjser@gmail.com
+- GitHub: [ustinian-wang](https://github.com/ustinian-wang)
+- Blog: [My Blog](https://ustinian-wang.github.io/blog/)
+- Location: Guangzhou, China
 
 ## Introduction
 
-I'm Ustinian Wang With 7+ years in front-end development, I excel in driving innovative projects, collaborating with diverse 
-
-teams, and elevating user experiences with advanced technologies. Eager to advance my skills and 
-
-make a significant impact in a dynamic work environment.
-
-- Email: wangjser@gmail.com 
-- GitHub: https://github.com/ustinian-wang
-- Blog: https://ustinian-wang.github.io/blog/
-- Location: Guangzhou, China 
-
-
+A seasoned Front-end Engineer with over 7 years of experience, I am adept at spearheading innovative projects, fostering collaborative environments, and leveraging cutting-edge technologies to enhance user experiences. I am eager to further hone my skills and contribute significantly to a vibrant and challenging work setting.
 
 ## Experience
 
-**Faisco** 
-
-Front-end Engineer 
-
+**Faisco**  
+*Front-end Engineer*  
 Dec 2016 - Present
 
-- I manage mall management projects on PC, mobile, and We Chat.
-
-- Responsible for critical features like Points Reward and Flash Sale.
-
-- Design reusable components to enhance UI and workflow efficiency.
-
-- Implement tailored business specifications for optimized practices.
+- Managed comprehensive mall management projects across PC, mobile, and WeChat platforms.
+- Spearheaded critical features such as Points Reward and Flash Sale, driving user engagement.
+- Designed reusable UI components, streamlining workflow and enhancing efficiency.
+- Tailored business specifications to optimize operational practices.
 
 ## Education
 
-**Beijing University of Posts and Telecommunications**	July 2024
-Bachelor's degree in Computer Science and Technology
-
-
+**Beijing University of Posts and Telecommunications**  
+Bachelor's degree in Computer Science and Technology  
+Expected Graduation: July 2024
 
 ## Projects
 
-**mallapp** 2020 - Present
+**mallapp**  
+2020 - Present
 
-- Our Saas platform comprises a designer interface and visitor view, enabling users to customize 
+- Developed a Saas platform with a customizable interface, serving over 20 million users.
+- Addressed critical production issues in real-time, ensuring business continuity.
+- Ensured cross-terminal compatibility, enabling seamless user experiences across platforms.
 
-views based on their preferences. With a user base exceeding 20 million, we consistently deliver 
+**mallfrontend**  
+2021 - Present
 
-features like Points Reward, Flash Sale, and Multi-store Operations on schedule.
-
-- I swiftly address production issues that impact crucial business operations such as order 
-
-settlement, price calculation, and member data management.
-
-- Our generated views are cross-terminal compatible, allowing publication on various platforms 
-
-including mobile apps and mini-programs like WeChat and TikTok.
-
-- We prioritize enhancing the mobile experience by focusing on first screen loading speed and 
-
-transactional order efficiency.
-
-**mallfrontend** 2021 - Present
-
-- Created a comprehensive internal component repository with over 100 components using 
-
-ant-design-vue.
-
-- Implemented consistent UI/UX design standards across all projects.
-
-- Extracted common components based on current business requirements and future projections to 
-
-prevent iterative development.
-
-- Provided detailed code snippets, visual examples, and thorough documentation to enhance team 
-
-learning, usage efficiency, and communication effectiveness.
+- Established an extensive component library using ant-design-vue, enhancing code reusability.
+- Implemented consistent UI/UX standards, fostering a cohesive user experience.
+- Anticipated future business needs, preventing repetitive development cycles.
+- Provided comprehensive documentation and examples, facilitating team efficiency.
 
 ## Technical Skills
 
-- Programming Languages: HTML, CSS, JavaScript, Java, Go
-
-- Front-end Frameworks: Vue and Vue ecosystem
-
-- Responsive Design and Mobile Optimization
-
-- Browser Developer Tools Usage and Debugging Skills
-
-- Cross-browser Compatibility Testing and Issue Resolution
-
-- Front-end Performance Optimization Techniques
+- **Programming Languages:** HTML, CSS, JavaScript, Java, Go
+- **Front-end Frameworks:** Proficient in Vue, React and its ecosystem
+- **Design & Optimization:** Responsive design, mobile optimization, performance tuning
+- **Development Tools:** Proficient with browser developer tools for debugging and optimization
+- **Compatibility & Testing:** Expertise in cross-browser testing and resolution of compatibility issues
