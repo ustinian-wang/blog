@@ -5,6 +5,7 @@
 - Email: wangjser@gmail.com
 - GitHub: [ustinian-wang](https://github.com/ustinian-wang)
 - Blog: [My Blog](https://ustinian-wang.github.io/blog/)
+- Works: [works](./works.md)
 - Location: Guangzhou, China
 
 ## Introduction
@@ -21,6 +22,7 @@ Dec 2016 - Present
 - Spearheaded critical features such as Points Reward and Flash Sale, driving user engagement.
 - Designed reusable UI components, streamlining workflow and enhancing efficiency.
 - Tailored business specifications to optimize operational practices.
+- You can visit its offical webside to know about what the features I maintain in daily work. See it on <https://mall.fkw.com/> 
 
 ## Education
 
