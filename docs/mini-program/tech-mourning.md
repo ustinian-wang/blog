@@ -14,7 +14,7 @@
 
 但是小程序没有`html`，只有`page`，应用方案1会导致安卓下`tabbar`定位丢失底部固定的效果，故此采用如下方案2：https://blog.csdn.net/my_bo/article/details/123657133
 
-![[Pasted image 20240804181805.png]]
+![[Pasted_image_20240804181805.png]](../images/Pasted_image_20240804181805.png)
 
 ```css
 image, button, text, span, video, [class^='icon-'], [class*='icon-'], [class^='icon_'], [class*='icon_'], .jz-global-mourning{
