@@ -76,3 +76,98 @@
 我们收集连续 10s 内每秒的 fps ，如果页面有 4 个帧没有超过 30 fps, 我们认为这个页面是卡顿的。
 
 
+## memory report
+
+## 内存上报内存上报
+
+1. `performance = {`  
+2.      `// memory 是非标准属性，只在 Chrome 有`
+3.      `//这个属性提供了一个可以获取到基本内存使用情况的对象`
+4.      `memory: {`
+5.          `usedJSHeapSize:  10000000, // 可使用的内存`
+6.          `totalJSHeapSize: 10000000, // 内存大小限制`
+7.          `jsHeapSizeLimit: 2190000000 // JS 对象（包括V8引擎内部对象）占用的内存`
+8.      `},`
+9. `}`
+
+主要基于Chrome的 performance.memory 接口获取内存信息进行上报
+
+### 接口分析接口分析
+
+jsHeapSizeLimit 属性为整个浏览器占用内存，多个标签页公用
+
+不同浏览器的内存数不一样
+
+- chrome 4144M
+- qq浏览器 1048M
+- 360安全浏览器 2096M
+
+因为这个值是根据浏览器固定的，所以不需要上报
+
+totalJSHeapSize 和 usedJSHeapSize 分别是 可用内存 和 当前内存
+
+经过测试，totalJSHeapSize是浏览器动态分配的，如果当前的 usedJSHeapSize 值接近 totalJSHeapSize值，浏览器就会增大totalJSHeapSize值。
+
+所以内存导致奔溃存在两种情况
+
+- 内存突然暴涨，导致usedJSHeapSize值 超过 totalJSHeapSize值
+    
+- 内存持续泄露，usedJSHeapSize缓慢增大，导致浏览器不断分配内存给 totalJSHeapSize。如果达到所有标签页的 totalJSHeapSize 加起来大于 jsHeapSizeLimit，就会导致整个浏览器奔溃
+    
+
+### 上报数据上报数据
+
+根据以上分析分享，只上报内存使用占比无法反应出内存情况，需要同时上报内存占比和当前内存
+
+- usedJSHeapSize / totalJSHeapSize
+    
+- usedJSHeapSize
+    
+
+## 奔溃上报奔溃上报
+
+网页崩溃之后，JS 运行不了了，无法使用常规方法进行监控和上报。只能通过浏览器的特殊机制进行监控
+
+### 基于 Service Worker 的崩溃统计方案基于 Service Worker 的崩溃统计方案
+
+- Service worker是一个注册在指定源和路径下的事件驱动worker，Service Worker 有自己独立的工作线程，与网页区分开，网页崩溃了，Service Worker 一般情况下不会崩溃；
+    
+- Service Worker 生命周期一般要比网页还要长，可以用来监控网页的状态；
+    
+- 网页可以通过 navigator.serviceWorker.controller.postMessage API 向掌管自己的 SW 发送消息。
+    
+
+基于以上几点，可以实现一种基于心跳检测的监控方案：
+
+- p1：网页加载后，通过 postMessage API 每 5s 给 sw 发送一个心跳，表示自己的在线，sw 将在线的网页登记下来，更新登记时间；
+    
+- p2：网页在 beforeunload 时，通过 postMessage API 告知自己已经正常关闭，sw 将登记的网页清除；
+    
+- p3：如果网页在运行的过程中 crash 了，sw 中的 running 状态将不会被清除，更新时间停留在奔溃前的最后一次心跳；
+    
+- sw：Service Worker 每 10s 查看一遍登记中的网页，发现登记时间已经超出了一定时间（比如 15s）即可判定该网页 crash 了。
+    
+
+### 兼容性兼容性
+
+IE 和 Opera Mini 基本不支持， Edge 17以下不支持，Safair 和 IOS Safair 刚刚开始支持，而火狐和 Chrome 支持良好
+
+
+![](../images/docs/notes/tech_monitor/IMG-20240812100404898.png)
+### 上报数据上报数据
+
+- 奔溃页面路径
+    
+- 页面内存 performance.memory
+    
+- 页面资源内存 performance.getEntriesByType()  
+    performance.getEntriesByType() 方法可以获取页面相关资源（js、css、img…）的加载信息  
+
+![](../images/docs/notes/tech_monitor/IMG-20240812100430321.png)
+    
+    我们只需用到以下几个信息
+    
+    1.   `// 资源的名称`
+    2.   `name: item.name,`
+    3.   `// 资源内存大小`
+    4.   `size: item.transferSize`
