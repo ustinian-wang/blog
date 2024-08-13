@@ -1,0 +1,154 @@
+## what is it
+
+- system design
+	- design
+		- requirements
+		- architecture
+		- interface
+	- system components
+		- scale
+		- security
+		- maintainable
+- type of frontent system design interviews
+	- system design
+	- product sense
+	- UI architecture
+	- machine coding/component design
+- things to consider in  frontend system design interviews
+	- requirements
+		- functional
+			- demand/supply: b2c; b2b
+			- module level thinking
+				- user management
+				- help and support
+				- payment gayway
+				- pricing and subscription
+				- production listing
+				- cart page
+				- account management
+			- feture level thinking
+		- non-functional
+			- mobile/desktop
+			- responsive/adaptive
+			- internet/location/devices
+			- accessibility
+			- asset optimization(css, js images)
+			- performance(fcp, lcp, tti, web vitials)
+			- csr/ssr
+			- authentication/authorization
+			- securty
+			- offline support
+			- loggin & monitoring
+			- ab test
+			- testing
+			- internationalization
+			- localization
+			- versioning
+			- pwa
+			- ci/cd
+			- 
+			- 
+	- scoping(Auth)
+		- demand
+		- module
+			- product listing
+			- cart page
+	- tech choices
+	- component architecture
+		- component hierachy
+		- routing
+		- data sharing
+	- data api & protocols & implementation
+		- protocals
+			- rest/graphql/sse/rpf
+			- json/protocol buffers
+		- implementation
+			- pagination/infinite scrolls
+			- debouceing/throttleing
+		- apis
+	- data modeling
+
+## component
+
+- Architectural Patterns
+	- Iframe
+	- Web components
+	- Module Federation
+	- MicroApps /Route based
+- Communication Protocols 
+	- long polling
+	- ws
+	- sse
+- Availability
+	- offline mode
+- Accessibility 
+	- keyboard
+	- screen
+- Consistency
+	- css
+	- design system
+- Credibility & Trust
+- Logging & Monitoring
+- Databases
+	- HTTP Caching
+	- In memory caching
+	- Apollo Caching
+	- State management(Redux，Context)
+	- Local storage
+	- Session storage
+	- Cookie
+	- IndexedDB
+- Caching
+- Security
+- Performance & Optimization
+	- Assets optimization
+	- Delivery option
+	- Build assets
+	- SSR
+	- Service worker
+	- -Web Vitals
+	- Perceived performance
+- Testing
+
+## network
+
+- Lazy loading
+	- lazy attribute
+	- fetchpriority
+		- ![](../images/docs/notes/system-design/IMG-20240813000628534.png)
+	- intersection observer
+		- ![](../images/docs/notes/system-design/IMG-20240813001033065.png)
+- Loading javascript in async 
+	- ![](../images/docs/notes/system-design/IMG-20240812235829786.png)
+- Content visibility
+	- ![](../images/docs/notes/system-design/IMG-20240813001514239.png)
+- Serving critical css
+	- ![](../images/docs/notes/system-design/IMG-20240813001717138.png)
+- Resource hints
+	- ![](../images/docs/notes/system-design/IMG-20240813001750434.png)
+	- ![](../images/docs/notes/system-design/IMG-20240813001809995.png)
+	- ![](../images/docs/notes/system-design/IMG-20240813001933822.png)
+	- ![](../images/docs/notes/system-design/IMG-20240813002057939.png)
+- Caching using service worker
+	- 
+- Caching using CDN
+- CSR，SSR
+	- ![](../images/docs/notes/system-design/IMG-20240813002842630.png)
+- Compression techniques
+- -Layout shits & repaints
+	- ![](../images/docs/notes/system-design/IMG-20240813002955377.png)
+	- ![](../images/docs/notes/system-design/IMG-20240813003034708.png)
+
+## assets
+![](../images/docs/notes/system-design/IMG-20240813123648146.png)
+- images
+	- compress
+		- ![](../images/docs/notes/system-design/IMG-20240813123757396.png)
+		- webp
+			- ![](../images/docs/notes/system-design/IMG-20240813123946123.png)
+			- ![](../images/docs/notes/system-design/IMG-20240813124057653.png)
+- video
+- font
+- css
+- js
+	- ![](../images/docs/notes/system-design/IMG-20240813125836750.png)

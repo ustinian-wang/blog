@@ -122,3 +122,45 @@ b.  如果没发包，考虑排查url内容是否合法
 参考 status 有效值，看下错误码排查
 https://developers.weixin.qq.com/miniprogram/dev/component/official-account.html
 
+
+Q 常见的小程序开发坑
+### setData
+
+- 一次不能set超过1024KB的数据
+    
+- 不要毫秒级别的去调用
+    
+- 多次setData合并为一次set
+    
+
+> setData的工作原理： 小程序的视图层目前使用 WebView 作为渲染载体，而逻辑层是由独立的 JavascriptCore 作为运行环境。在架构上，WebView 和 JavascriptCore 都是独立的模块，并不具备数据直接共享的通道。当前，视图层和逻辑层的数据传输，实际上通过两边提供的 evaluateJavascript 所实现。即用户传输的数据，需要将其转换为字符串形式传递，同时把转换后的数据内容拼接成一份 JS 脚本，再通过执行 JS 脚本的形式传递到两边独立环境。 而 evaluateJavascript 的执行会受很多方面的影响，数据到达视图层并不是实时的。
+
+1.开发的过程中我在这里踩了两次坑，第一次，将历史队列set到Data中去，结果爆超过1024KB的问题。
+
+2.编辑态中间区域元素拖拽卡顿的问题。第一个版本实时改变的全局的数据，页面元素一多就会卡顿，第二版本改成组件的形式，拖拽的时候改变的是组件中的数据，最后touchend的时候才同步到全局中去。
+
+3.编辑态中的slider等组件使用了函数节流的方案。
+
+### [](https://note.youdao.com/md/preview.html?file=%2Fyws%2Fapi%2Fgroup%2F2030634%2Ffile%2F204988633%3Fmethod%3Dread%26WLP%3Dtrue#%E5%AF%8C%E6%96%87%E6%9C%AC%E8%A7%A3%E6%9E%90)富文本解析
+
+词法分析（坑爹，由于pc端的富文本各种font,span嵌套，导致词法分析也GG了），开源的wxParse也不适合我们的需求，只能自己干。
+
+### [](https://note.youdao.com/md/preview.html?file=%2Fyws%2Fapi%2Fgroup%2F2030634%2Ffile%2F204988633%3Fmethod%3Dread%26WLP%3Dtrue#%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%97%E4%BD%93%E7%9A%84%E9%97%AE%E9%A2%98)动态加载字体的问题
+
+一开始微信是没有提供动态加载字体的api，从基础库版本2.1.0开始才有动态加载字体的API：loadFontFac。这里有一个跨域的坑，ios加载字体正常，安卓无法加载字体，服务器要设置代理白名单。
+
+### [](https://note.youdao.com/md/preview.html?file=%2Fyws%2Fapi%2Fgroup%2F2030634%2Ffile%2F204988633%3Fmethod%3Dread%26WLP%3Dtrue#%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87)本地图片
+
+本地资源无法通过 WXSS 获取;解决方案：写在wxml中style中或者使用image标签
+
+### [](https://note.youdao.com/md/preview.html?file=%2Fyws%2Fapi%2Fgroup%2F2030634%2Ffile%2F204988633%3Fmethod%3Dread%26WLP%3Dtrue#boundingclientrect)boundingClientRect
+
+在做iphoneX的底部操作栏的适配时，发现子元素拥有多层定位不为static/relative的，获取的定位不正确。这应该是小程序的一个bug。
+
+### [](https://note.youdao.com/md/preview.html?file=%2Fyws%2Fapi%2Fgroup%2F2030634%2Ffile%2F204988633%3Fmethod%3Dread%26WLP%3Dtrue#promise)promise
+
+promise没写catch函数，报错
+
+### [](https://note.youdao.com/md/preview.html?file=%2Fyws%2Fapi%2Fgroup%2F2030634%2Ffile%2F204988633%3Fmethod%3Dread%26WLP%3Dtrue#swiper-%E5%9C%86%E8%A7%92)swiper 圆角
+
+swiper设置圆角在真机中不生效，小程序的bug
