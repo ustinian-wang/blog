@@ -20,14 +20,14 @@
 #### 项目的实现细节：
 由于 sw 的限制，只能放在所需监控域名的目录下。即单个业务使用可以将 sw.js 文件放在 xxx 域名的根目录下来监控网页是否崩溃。如下图所示：
 
-![[../images/docs/notes/tech-monitor/IMG-20240814130624643.png]](../images/Pasted_image_20240812093220.png)
+![[../images/docs/notes/tech-monitor/IMG-20240814130624643.png]](../images/docs/notes/tech-monitor/IMG-20240814130624643.png)
 
 > 注意：公共组件为了实现各个业务都能监控上报，不可能在 hawkEye.src.js 文件中去注册 sw ，假如这样去注册了只能监控资源域名的状态，这样是没有意义的。
 
 #### 公共组件的实现细节：
 在网页生成一个隐藏的 iframe，在 iframe 里注册 sw，之后网页直接通过 iframe 来通信。iframe 起到一个中转的作用。如下图所示：
 
-![[../images/docs/notes/tech-monitor/IMG-20240814130624687.png]](../images/Pasted_image_20240812093230.png)
+![[../images/docs/notes/tech-monitor/IMG-20240814130624687.png]](../images/docs/notes/tech-monitor/IMG-20240814130624687.png)
 
 ### 页面卡顿监控方案
 要监控网页的卡顿，我们必须从 fps 说起。fps 是来自视频或者游戏里的概念，即是每秒的帧数，代表视频或者游戏的流畅度，俗话说，就是“不卡”。
@@ -38,14 +38,14 @@
 
 在 Chrome 中可以通过开发者工具查看网页的 fps：
 
-![[../images/docs/notes/tech-monitor/IMG-20240814130624737.png]](../images/Pasted_image_20240812093243.png)
+![[../images/docs/notes/tech-monitor/IMG-20240814130624737.png]](../images/docs/notes/tech-monitor/IMG-20240814130624737.png)
 
 注意，网页不是随时都需要，该工具看到的是每次更新是 fps 值。
 最优的帧率是 60，即 16.7ms 左右渲染一次。
 
 通过 Chrome 或者 Firfox 等的性能工具也可以查看浏览器的帧率：
 
-![[../images/docs/notes/tech-monitor/IMG-20240814130624788.png]](../images/Pasted_image_20240812093254.png)
+![[../images/docs/notes/tech-monitor/IMG-20240814130624788.png]](../images/docs/notes/tech-monitor/IMG-20240814130624788.png)
 
 
 > 绿色的直方图即代表在页面重新绘制时的帧率，Frames 为每一帧渲染所花的时间。
