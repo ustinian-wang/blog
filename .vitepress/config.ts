@@ -34,7 +34,7 @@ export default defineConfig({
         search: {
             provider: 'local'
         },
-        outline: [2,5],
+        outline: [2, 5],
         returnToTopLabel: "Return to top"
     },
     vite: {
@@ -44,17 +44,18 @@ export default defineConfig({
                 collapsed: true,
                 ignoreList: ['.obsidian', '.git', 'node_modules']
             }),
-            pagefindPlugin(
-            {
-                customSearchQuery(input) {
-                    // 将搜索的每个中文单字两侧加上空格
-                    return input.replace(/[\u4E00-\u9FA5]/g, ' $& ')
-                        .replace(/\s+/g, ' ')
-                        .trim()
-                },
-                forceLanguage: 'zh-cn',
-            }
-        )],
+            // pagefindPlugin(
+            // {
+            //     customSearchQuery(input) {
+            //         // 将搜索的每个中文单字两侧加上空格
+            //         return input.replace(/[\u4E00-\u9FA5]/g, ' $& ')
+            //             .replace(/\s+/g, ' ')
+            //             .trim()
+            //     },
+            //     forceLanguage: 'zh-cn',
+            // }
+            // )
+        ],
     },
     lastUpdated: true,
 })
