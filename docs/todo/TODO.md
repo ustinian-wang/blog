@@ -11,6 +11,9 @@
 			- [x] 母公司是vercel
 			- [x] ssr：集合后端服务动态生成内容。
 			- [x] ssg：服务端生成，即预先生成页面，当作静态资源给客户访问，例如vuepress提前生成的blog
+			- [ ] feature
+				- [ ] 适用场景: 网站应用开发, React生态
+				- [ ] 服务端渲染, 静态生成, 自动代码拆分
 			- [ ] detail
 		- [ ] Typescript
 			- [x] fundamental
@@ -29,7 +32,10 @@
 			- [x] overview: 一套UI组件库
 			- [ ] detail
 		- [ ] Nestjs
-			- [x] overview: 基于nodejs的后端框架
+			- [x] overview: 基于nodejs的后端框架，
+			- [ ] features:
+				- [ ] 适用场景: 大型应用开发
+				- [ ] 模块化结构, 依赖注入, 面向切面编程
 			- [ ] detail
 		- [ ] typeorm/prisma
 			- [x] 这两个是orm框架
