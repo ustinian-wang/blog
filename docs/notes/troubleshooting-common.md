@@ -107,6 +107,9 @@ git remote remove origin
 ```
 
 以上步骤涵盖了大部分常见的远程仓库操作。希望这些信息对你有所帮助！
+### Q fatal: refusing to merge unrelated histories
+
+参考下方
 
 ### Q 如果两个分支没有关系，怎么强制合并？
 这个错误通常发生在你尝试合并两个没有共同历史的分支时。要解决这个问题，你可以使用 `--allow-unrelated-histories` 选项来允许合并。运行以下命令：
