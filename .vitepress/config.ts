@@ -1,6 +1,7 @@
 import {defineConfig} from 'vitepress'
 import {pagefindPlugin} from "vitepress-plugin-pagefind";
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
+import {generateSidebar} from "./utils";
 //default options
 let options = {
     previewLength: 62,
@@ -9,7 +10,7 @@ let options = {
     allow: [],
     ignore: [],
 };
-
+let sidebar = generateSidebar('./docs')
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     base: "/blog",
@@ -17,7 +18,7 @@ export default defineConfig({
     description: "This is my blog to record solutions of issues in daily development",
     lang: 'zh-cn',
     themeConfig: {
-
+        sidebar,
         editLink: {
             pattern: 'https://github.com/ustinian-wang/blog/edit/main/:path'
         },
@@ -30,31 +31,32 @@ export default defineConfig({
         socialLinks: [
             {icon: 'github', link: 'https://github.com/ustinian-wang'}
         ],
-
-        search: {
-            provider: 'local'
-        },
+        //
+        // search: {
+        //     provider: 'local'
+        // },
         outline: [2, 5],
         returnToTopLabel: "Return to top"
     },
     vite: {
         plugins: [
-            AutoSidebar({
-                path: '.',
-                collapsed: true,
-                ignoreList: ['.obsidian', '.git', 'node_modules']
-            }),
-            // pagefindPlugin(
-            // {
-            //     customSearchQuery(input) {
-            //         // 将搜索的每个中文单字两侧加上空格
-            //         return input.replace(/[\u4E00-\u9FA5]/g, ' $& ')
-            //             .replace(/\s+/g, ' ')
-            //             .trim()
-            //     },
-            //     forceLanguage: 'zh-cn',
-            // }
-            // )
+            //加上这个之后，pagefindPlugin会失效！！！
+            // AutoSidebar({
+            //     path: '.',
+            //     collapsed: true,
+            //     ignoreList: ['.obsidian', '.git', 'node_modules']
+            // }),
+            pagefindPlugin(
+            {
+                customSearchQuery(input) {
+                    // 将搜索的每个中文单字两侧加上空格
+                    return input.replace(/[\u4E00-\u9FA5]/g, ' $& ')
+                        .replace(/\s+/g, ' ')
+                        .trim()
+                },
+                forceLanguage: 'zh-cn',
+            }
+            )
         ],
     },
     lastUpdated: true,
