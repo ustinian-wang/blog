@@ -75,6 +75,9 @@
 - [ ] blog
 	- [ ] 迁移go的笔记
 - [ ] eslint-check
+- [ ] 买域名
+- [ ] <https://ustinian-wang.github.io/>解析到新域名上
+- [ ] 提交百度站长爬取：<https://ziyuan.baidu.com/site/siteadd?siteurl=#/>
 ## suspend
 
 - [ ] 多语言：https://github.com/ocoke/Biscus/discussions/14: 暂时不需要了
