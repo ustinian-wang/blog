@@ -68,6 +68,18 @@
 		- [ ] typeorm/prisma
 			- [x] 这两个是orm框架
 			- [ ] https://www.bilibili.com/video/BV1V94y1w7vz/?spm_id_from=333.337.search-card.all.click&vd_source=848024e4757acc90368998dc07e9486b
+- [ ]  system design
+	- [x] https://www.youtube.com/watch?v=sV_4pOGosnU&list=PL4CFloQ4GGWICE0Tz6iXKfN3XWkXRlboU
+		- [ ] 其实是你怎么分析需求，技术选型之类的，只是重点在前端和工程化方面
+	- [ ] 看3个面试现场看看
+- [ ] 加入自己的作品集合
+	- [ ] components
+		- [ ] 图片
+			- [ ] acceptFill
+			- [ ] acceptFull
+## normal
+
+>>>>>>> Stashed changes
 - [ ] 算法
 - [ ] ci加上邮件通知
 - [ ] 头像加动画: 
@@ -103,6 +115,8 @@
 - [x] 优化历史文章内容，剥离业务内容
 - [x] 导入新的文章
  - [x]  kit
+- [ ] 加入自己的作品集合
+	- [x] kit
 	- [x] tic
 	- [x] psdToHtml
 		- [x] github
@@ -111,6 +125,7 @@
 		- [x] design
 			- [x] doing
 			- [ ] done
+			- [x] done
 		- [x] code
 		- [x] docs
 		- [x] preview
