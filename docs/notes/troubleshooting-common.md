@@ -42,6 +42,31 @@ error D:\chenjiajin\res\mallhelper-res\node_modules\node-sass: command failed
     1. 用 管理者权限运行power shell 执行 `npm install --global --production windows-build-tools`
     2. 设置镜像：`yarn --registry=http://registry.npm.faidev.cc`
 
+### Q: 如何仓库设置镜像
+
+> 临时设置\
+
+```shell
+npm install --registry=https://registry.npmjs.org
+yarn --registry=https://registry.yarnpkg.com
+```
+
+> 全局设置
+
+```shell
+npm config set registry https://registry.npmjs.org
+yarn config set registry https://registry.yarnpkg.com
+```
+
+> 镜像清单
+
+| 镜像                              | 作用               |
+| ------------------------------- | ---------------- |
+| https://registry.npm.taobao.org | ~~淘宝镜像（官方逐步废弃）~~ |
+| https://registry.npmmirror.com  | 淘宝镜像             |
+| https://registry.npmjs.org      | npm官方            |
+| https://registry.yarnpkg.com    | yarn官方           |
+| http://registry.npm.faidev.cc   | 公司               |
 
 ## GIT
 
@@ -134,3 +159,4 @@ git merge branch-name --allow-unrelated-histories
 ## html
 ### Q: 白屏情况
 - 页面视觉被隐藏了
+
