@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 import {pagefindPlugin} from "vitepress-plugin-pagefind";
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 import {generateSidebar} from "./utils";
+import {writeFileSync} from "fs";
 //default options
 let options = {
     previewLength: 62,

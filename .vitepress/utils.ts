@@ -25,22 +25,36 @@ export function generateSidebar(dir: string): any[] {
             items.push({
                 text: file,
                 collapsible: true,
-                items: generateSidebar(filePath).map(item => ({
-                    text: item.text,
-                    link: join(file, item.link).replace(/\\/g, '/')
-                }))
+                items: generateSidebar(filePath).map(item => {
+                    let link = join(file, item.link).replace(/\\/g, '/');
+                    link = removeDocs(link);
+                    return {
+                        text: item.text,
+                        link: link
+                    }
+                })
             });
         } else if (file.endsWith('.md')) {
             // 如果是 Markdown 文件
             const fileName = basename(file, '.md');
+            let link = join(dir, fileName).replace(/\\/g, '/');
+            link = removeDocs(link);
             items.push({
                 text: capitalize(fileName),
-                link: join(dir, fileName).replace(/\\/g, '/')
+                link
             });
         }
     });
 
     return items;
+}
+
+function removeDocs(str: string){
+    if(str.indexOf("/docs/") > -1){
+        let res = str.slice(str.indexOf("/docs/")+"/docs/".length);
+        return res;
+    }
+    return str;
 }
 
 // 将字符串首字母大写的辅助函数
