@@ -51,7 +51,7 @@ export function generateSidebar(dir: string): any[] {
 
 function removeDocs(str: string){
     if(str.indexOf("/docs/") > -1){
-        let res = str.slice(str.indexOf("/docs/")+"/docs/".length);
+        let res = str.slice(str.indexOf("/docs/"));
         return res;
     }
     return str;
