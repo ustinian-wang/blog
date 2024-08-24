@@ -145,6 +145,23 @@ git merge branch-name --allow-unrelated-histories
 
 这将允许 Git 合并两个没有共同历史的分支。确保你在合并之前备份了重要数据，以防出现意外问题。
 
+### Q 如何在git中把文件删除
+
+要从 Git 缓存中删除某个文件，可以使用 `git rm --cached` 命令。执行以下步骤：
+
+1. **删除文件从缓存**：
+   ```bash
+   git rm --cached path/to/file
+   ```
+   这将从 Git 的缓存中删除文件，但保留本地文件。
+
+2. **提交更改**：
+   ```bash
+   git commit -m "Remove file from cache"
+   ```
+
+这样，文件将不再被 Git 跟踪，但仍保留在你的工作目录中。
+
 ## IOS
 
 ### Q: 图片旋转
