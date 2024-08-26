@@ -5,6 +5,7 @@
 	- [x] https://www.youtube.com/watch?v=sV_4pOGosnU&list=PL4CFloQ4GGWICE0Tz6iXKfN3XWkXRlboU
 		- [ ] 其实是你怎么分析需求，技术选型之类的，只是重点在前端和工程化方面
 	- [ ] 看3个面试现场看看
+		- [ ] https://www.youtube.com/watch?v=ai1zmNO5Z3E&t=416s
 
 ## normal
 
