@@ -68,6 +68,17 @@ yarn config set registry https://registry.yarnpkg.com
 | https://registry.yarnpkg.com    | yarn官方           |
 | http://registry.npm.faidev.cc   | 公司               |
 
+### Q: 出现：`Error: error:0308010C:digital envelope routines::unsupported`
+
+> 问题原因
+
+因为 node.js V17版本中最近发布的OpenSSL3.0, 而OpenSSL3.0对允许算法和密钥大小增加了严格的限
+
+> 解决方式(多选1)
+
+- 设置环境变量: `export NODE_OPTIONS=--openssl-legacy-provider`
+- 卸载Node.js17+版本，安装Node.js17-版本
+
 ## GIT
 
 ### Q: 前端代码在某个环境没生效
