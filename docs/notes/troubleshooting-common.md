@@ -68,6 +68,34 @@ yarn config set registry https://registry.yarnpkg.com
 | https://registry.yarnpkg.com    | yarn官方           |
 | http://registry.npm.faidev.cc   | 公司               |
 
+## nvm
+
+### Q: Get "https://nodejs.org/dist/latest/SHASUMS256.txt": dial tcp 104.20.23.46:443: i/o timeout
+> 问题表现
+
+```shell
+C:\Users\faisco>nvm install latest
+
+Could not retrieve https://nodejs.org/dist/latest/SHASUMS256.txt.
+
+
+Get "https://nodejs.org/dist/latest/SHASUMS256.txt": dial tcp 104.20.22.46:443: i/o timeout
+```
+
+> 问题原因
+
+这个ip被墙了，更换镜像即可
+
+> 解决方式
+
+
+- 编辑nvm的配置文件: `D:\software\nvm\setting.txt`
+- 输入如下内容
+```text/plain
+node_mirror:npmmirror.com/mirrors/node/
+npm_mirror:npmmirror.com/mirrors/npm/
+```
+- 重新运行安装一次：`nvm install latest`
 ## GIT
 
 ### Q: 前端代码在某个环境没生效
