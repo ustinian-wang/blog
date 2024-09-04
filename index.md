@@ -12,7 +12,7 @@ hero:
       link: /docs/notes/README.md
     - theme: alt
       text: About Me
-      link: /docs/resume
+      link: /docs/Resume
 
 features:
   - title: notes
