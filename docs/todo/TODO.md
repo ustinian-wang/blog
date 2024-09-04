@@ -1,12 +1,8 @@
 ##  High
 
-
-- [ ]  system design
-	- [x] https://www.youtube.com/watch?v=sV_4pOGosnU&list=PL4CFloQ4GGWICE0Tz6iXKfN3XWkXRlboU
-		- [ ] 其实是你怎么分析需求，技术选型之类的，只是重点在前端和工程化方面
-	- [ ] 看3个面试现场看看
-		- [ ] https://www.youtube.com/watch?v=ai1zmNO5Z3E&t=416s
-
+- [ ] React
+	- [ ] redux
+	- [ ] router
 ## normal
 
 - [ ] 加入自己的作品集合
@@ -30,49 +26,8 @@
 			- [ ] menu
 				- [ ] context-menu
 			- [ ] modal
-- [ ] React
-	- [x] react base
-	- [ ] redux
-	- [ ] router
-	- [ ] ecosystem
-		- [ ] Next
-			- [x] overview: https://www.bilibili.com/video/BV14t4y187Kk/?spm_id_from=333.337.search-card.all.click&vd_source=848024e4757acc90368998dc07e9486b
-			- [x] 母公司是vercel
-			- [x] ssr：集合后端服务动态生成内容。
-			- [x] ssg：服务端生成，即预先生成页面，当作静态资源给客户访问，例如vuepress提前生成的blog
-			- [ ] feature
-				- [ ] 适用场景: 网站应用开发, React生态
-				- [ ] 服务端渲染, 静态生成, 自动代码拆分
-			- [ ] detail
-		- [ ] Typescript
-			- [x] fundamental
-			- [ ] quick start
-		- [ ] Tailwind
-			- [x] overview: 一个css原子类框架，可以直接引入cdn或者结合工程化进行处理
-			- [x] 优点：它可以动态生成一些原子类，比如w-[101px]这种，会比你写width:101px的style好点
-			- [ ] detail
-		- [ ] Shadcn/ui
-			- [x] overview：https://ui.shadcn.com/docs/components/alert-dialog
-			- [ ] detail
-		- [ ] mui
-			- [x] overview: https://www.bilibili.com/video/BV1Ci421Q72o/?spm_id_from=333.337.search-card.all.click&vd_source=848024e4757acc90368998dc07e9486b
-			- [ ] react库，他是一个类似ant-design的ui库
-		- [ ] NextUl
-			- [x] overview: 一套UI组件库
-			- [ ] detail
-		- [ ] Nestjs
-			- [x] overview: 基于nodejs的后端框架，
-			- [ ] features:
-				- [ ] 适用场景: 大型应用开发
-				- [ ] 模块化结构, 依赖注入, 面向切面编程
-			- [ ] detail
-		- [ ] typeorm/prisma
-			- [x] 这两个是orm框架
-			- [ ] https://www.bilibili.com/video/BV1V94y1w7vz/?spm_id_from=333.337.search-card.all.click&vd_source=848024e4757acc90368998dc07e9486b
-- [ ]  system design
-	- [x] https://www.youtube.com/watch?v=sV_4pOGosnU&list=PL4CFloQ4GGWICE0Tz6iXKfN3XWkXRlboU
-		- [ ] 其实是你怎么分析需求，技术选型之类的，只是重点在前端和工程化方面
-	- [ ] 看3个面试现场看看
+
+
 - [ ] 加入自己的作品集合
 	- [ ] components
 		- [ ] 图片
@@ -119,7 +74,7 @@
 - [x] 优化历史文章内容，剥离业务内容
 - [x] 导入新的文章
  - [x]  kit
-- [ ] 加入自己的作品集合
+- [x] 加入自己的作品集合
 	- [x] kit
 	- [x] tic
 	- [x] psdToHtml
@@ -128,8 +83,51 @@
 	- [x] calculator
 		- [x] design
 			- [x] doing
-			- [ ] done
+			- [x] done
 			- [x] done
 		- [x] code
 		- [x] docs
 		- [x] preview
+- [x]  system design
+	- [x] https://www.youtube.com/watch?v=sV_4pOGosnU&list=PL4CFloQ4GGWICE0Tz6iXKfN3XWkXRlboU
+		- [x] 其实是你怎么分析需求，技术选型之类的，只是重点在前端和工程化方面
+	- [x] 看3个面试现场看看
+
+- [x] React
+	- [x] react base
+	- [x] ecosystem
+		- [x] Next
+			- [x] overview: https://www.bilibili.com/video/BV14t4y187Kk/?spm_id_from=333.337.search-card.all.click&vd_source=848024e4757acc90368998dc07e9486b
+			- [x] 母公司是vercel
+			- [x] ssr：集合后端服务动态生成内容。
+			- [x] ssg：服务端生成，即预先生成页面，当作静态资源给客户访问，例如vuepress提前生成的blog
+			- [x] feature
+				- [x] 适用场景: 网站应用开发, React生态
+				- [x] 服务端渲染, 静态生成, 自动代码拆分
+			- [x] detail
+		- [x] Typescript
+			- [x] fundamental
+			- [x] quick start
+		- [x] Tailwind
+			- [x] overview: 一个css原子类框架，可以直接引入cdn或者结合工程化进行处理
+			- [x] 优点：它可以动态生成一些原子类，比如w-[101px]这种，会比你写width:101px的style好点
+			- [x] detail
+		- [x] Shadcn/ui
+			- [x] overview：https://ui.shadcn.com/docs/components/alert-dialog
+				- [x] 这是一个开箱即用的UI框架，以jsx的形式提供代码，你可以按需导入组件到项目里面，它是类似hygen在项目下生成组件的源码，所以你可以自己维护定制，而不像npm包那样子无法修改源码
+			- [x] detail
+		- [x] mui
+			- [x] overview: https://www.bilibili.com/video/BV1Ci421Q72o/?spm_id_from=333.337.search-card.all.click&vd_source=848024e4757acc90368998dc07e9486b
+			- [x] react库，他是一个类似ant-design的ui库
+		- [x] NextUl
+			- [x] overview: 一套UI组件库
+			- [x] detail
+		- [x] Nestjs
+			- [x] overview: 基于nodejs的后端框架，
+			- [x] features:
+				- [x] 适用场景: 大型应用开发
+				- [x] 模块化结构, 依赖注入, 面向切面编程
+			- [x] detail
+		- [x] typeorm/prisma
+			- [x] 这两个是orm框架
+			- [x] https://www.bilibili.com/video/BV1V94y1w7vz/?spm_id_from=333.337.search-card.all.click&vd_source=848024e4757acc90368998dc07e9486b
