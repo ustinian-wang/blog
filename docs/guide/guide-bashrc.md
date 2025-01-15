@@ -4,6 +4,7 @@ alias ga="git add ."
 alias gs="git status"
 alias gp="git pull"
 alias gps="git push"
+alias gpp="git pull && git push"
 alias gd="git diff"
 alias gas="git add . && git stash save"
 alias gss="git stash save"
@@ -25,16 +26,21 @@ alias ma-base="cd $FAISCO_APP_PATH/res/mallfrontend/packages/faicomponent-base"
 alias ma-kit="cd $FAISCO_APP_PATH/res/mallfrontend/packages/kit"
 alias ma-eslint="cd $FAISCO_APP_PATH/res/mallfrontend/packages/eslint-plugin-ma-rules"
 alias ma-docs="cd $FAISCO_APP_PATH/docs"
-alias site-res="cd $FAISCO_APP_PATH/res/mallsite-res"
+alias site-res="cd $FAISCO_APP_PATH/res/mallsite-res/js"
+alias site-rebuild="cd $FAISCO_APP_PATH/res/mallsite-res/js && yarn build"
 alias allsite-res="cd $FAISCO_APP_PATH/res/mallallsite-res"
 alias helper-res="cd $FAISCO_APP_PATH/res/mallhelper-res"
 alias mobi-res="cd $FAISCO_APP_PATH/res/mallmobi-res/v2"
 alias mallapp-res="cd $FAISCO_APP_PATH/res/mallapp-res"
+alias uniapp-res="cd $FAISCO_APP_PATH/res/malluniapp-res"
+alias xcx-dev-upload="uniapp-res && yarn xcx-dev-upload"
+alias xcx-dep-upload="uniapp-res && yarn xcx-dep-upload"
 alias mobi-deploy="mobi-res && yarn deploy"
 alias npm-repo="npm config set registry https://registry.npmmirror.com"
 alias yarn-repo="yarn config set registry https://registry.yarnpkg.com"
 alias fnpm-repo="npm config set registry https://registry.npmmirror.com"
 alias fyarn-repo="yarn config set registry https://registry.yarnpkg.com"
+
 # faisco end
 
 # other start
@@ -59,7 +65,7 @@ function pkg-up() {
         pkg-up allsite-res $package_name;
     elif [ "$project_path" == "site-res" ]; then
         echo "site-res"
-        site-res && yarn upgrade $package_name;
+        site-res && npm install $package_name;
     elif [ "$project_path" == "mobi-res" ]; then
         echo "mobi-res"
         mobi-res && yarn upgrade $package_name;
@@ -69,6 +75,9 @@ function pkg-up() {
     elif [ "$project_path" == "mallapp-res" ]; then
         echo "mallapp-res"
         mallapp-res && yarn upgrade $package_name;
+    elif [ "$project_path" == "allsite-res" ]; then 
+        echo "allsite-res"
+        allsite-res && npm install $package_name;
     fi
 }
 ```
