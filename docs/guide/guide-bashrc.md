@@ -48,6 +48,10 @@ alias sbs="source ~/.bashrc"
 alias vbs="vim ~/.bashrc"
 # other end
 
+alias wcbot-jser="wcbot jser-key $1"
+alias wcbot-test="wcbot test-key $1"
+alias wcbot-msg="wcbot msg-key $1"
+
 function pkg-up() {
     if [ -z "$1" ] || [ -z "$2" ]; then
         echo "Usage: pkg_up <project_path> <package_name>"
@@ -80,4 +84,37 @@ function pkg-up() {
         allsite-res && npm install $package_name;
     fi
 }
+
+
+function wcbot(){
+    local webhook_key="$1"
+    local message="$2"
+
+    # 检查参数是否为空
+    if [ -z "$webhook_key" ]; then
+        echo "wcbot: <webhook_key> <message>"
+        return 1
+    fi
+
+    if [ -z "$message" ]; then
+        echo "wcbot: $1 <message>"
+        return 1
+    fi
+
+    # 企业微信机器人 Webhook URL
+    local webhook_url="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${webhook_key}"
+
+    # 发送消息
+    curl -X POST "${webhook_url}" \
+       -H 'Content-Type: application/json' \
+       -d '{
+            "msgtype": "text",
+            "text": {
+                "content": "'"${message}"'"
+            }
+        }'
+
+    echo "Message sent: ${message}"
+}
 ```
+
