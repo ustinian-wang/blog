@@ -76,6 +76,7 @@
  - [x]  kit
 - [x] 加入自己的作品集合
 	- [x] kit
+	- [ ] eslint-plugin-urule
 	- [x] tic
 	- [x] psdToHtml
 		- [x] github

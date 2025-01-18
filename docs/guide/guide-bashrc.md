@@ -117,4 +117,3 @@ function wcbot(){
     echo "Message sent: ${message}"
 }
 ```
-
