@@ -76,8 +76,9 @@
  - [x]  kit
 - [x] 加入自己的作品集合
 	- [x] kit
-	- [ ] eslint-plugin-urule
-	- [x] tic
+	- [ ] eslint-plugin-urule eslint自定义规则和推荐规则，包括文档
+	- [ ] pkg-gen 生成npm包的项目模板
+ 	- [x] tic
 	- [x] psdToHtml
 		- [x] github
 		- [x] docs
