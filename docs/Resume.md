@@ -21,8 +21,11 @@ Dec 2016 - Present
 - Managed comprehensive mall management projects across PC, mobile, and WeChat platforms.
 - Spearheaded critical features such as Points Reward and Flash Sale, driving user engagement.
 - Designed reusable UI components, streamlining workflow and enhancing efficiency.
+- Shipping code transformer based on AST to improve speed in historical codes refactor. 
 - Tailored business specifications to optimize operational practices.
 - You can visit its offical webside to know about what the features I maintain in daily work. See it on <https://mall.fkw.com/> 
+
+
 
 ## Education
 
@@ -35,7 +38,7 @@ Expected Graduation: July 2024
 **mallapp**  
 2020 - Present
 
-- Developed a Saas platform with a customizable interface, serving over 20 million users.
+- Developed a Saas platform with a customizable interface, serving over 30 million users.
 - Addressed critical production issues in real-time, ensuring business continuity.
 - Ensured cross-terminal compatibility, enabling seamless user experiences across platforms.
 
@@ -46,6 +49,14 @@ Expected Graduation: July 2024
 - Implemented consistent UI/UX standards, fostering a cohesive user experience.
 - Anticipated future business needs, preventing repetitive development cycles.
 - Provided comprehensive documentation and examples, facilitating team efficiency.
+
+> the below is internal packages, you cannot find it on npm. it's just for experience description
+
+| name | description |
+| --- | --- |
+| @mall/kit | provides common kits in browser env |
+| @mall/faicomponent-base | the business UI component based on AntDesignVue |
+| @mall/eslint-plugin-ma-rules | the common business eslint rules for code checking in IDE tips |
 
 ## Technical Skills
 
