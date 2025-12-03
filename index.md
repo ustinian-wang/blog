@@ -5,7 +5,7 @@ hero:
   name: "My Blog"
   text: "A passionate Frontend engineer"
   tagline: Washing away the dust out of the soul
-  image: /docs/images/profile.png
+  image: /images/profile.png
   actions:
     - theme: brand
       text: Notes
