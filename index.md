@@ -5,7 +5,7 @@ hero:
   name: "My Blog"
   text: "A passionate Frontend engineer"
   tagline: Washing away the dust out of the soul
-  image: https://avatars.githubusercontent.com/u/19329080?v=4
+  image: /docs/images/profile.png
   actions:
     - theme: brand
       text: Notes
@@ -18,4 +18,3 @@ features:
   - title: notes
     details: Recoding solutions of issues in daily development. 
 ---
-
